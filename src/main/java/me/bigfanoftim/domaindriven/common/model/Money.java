@@ -14,6 +14,10 @@ public class Money {
         return value;
     }
 
+    public Money multiply(int multiplier) {
+        return new Money(value * multiplier);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

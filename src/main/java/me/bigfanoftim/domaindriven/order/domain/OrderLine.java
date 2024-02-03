@@ -23,4 +23,22 @@ public class OrderLine {
     @Convert(converter = MoneyConverter.class)
     @Column(name = "amounts")
     private Money amounts;
+
+    protected OrderLine() {
+    }
+
+    public OrderLine(String productId, Money price, int quantity) {
+        this.productId = productId;
+        this.price = price;
+        this.quantity = quantity;
+        this.amounts = calculateAmounts(); // price, quantity 할당된 후 호출
+    }
+
+    public Money getAmounts() {
+        return amounts;
+    }
+
+    private Money calculateAmounts() {
+        return price.multiply(quantity);
+    }
 }
