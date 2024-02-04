@@ -29,7 +29,7 @@ public class OrderLine {
 
     public OrderLine(String productId, Money price, int quantity) {
         this.productId = productId;
-        this.price = price;
+        this.price = price; // Money는 불변이기 때문에 새로 객체를 생성할 필요가 없음
         this.quantity = quantity;
         this.amounts = calculateAmounts(); // price, quantity 할당된 후 호출
     }

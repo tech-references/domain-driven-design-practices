@@ -6,6 +6,10 @@ import me.bigfanoftim.domaindriven.common.model.Money;
 
 import java.util.List;
 
+/**
+ * TODO: 055p, 생성자에 private set 메소드 활용
+ *       JPA에서는 어떻게?
+ */
 @Entity
 @Table(name = "purchase_order")
 public class Order {

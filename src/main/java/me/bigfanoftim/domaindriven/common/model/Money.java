@@ -14,6 +14,10 @@ public class Money {
         return value;
     }
 
+    public Money add(Money money) {
+        return new Money(this.value + money.getValue());
+    }
+
     public Money multiply(int multiplier) {
         return new Money(value * multiplier);
     }
