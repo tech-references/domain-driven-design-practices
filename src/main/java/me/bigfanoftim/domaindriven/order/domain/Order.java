@@ -35,6 +35,21 @@ public class Order {
     @OrderColumn(name = "line_idx")
     private List<OrderLine> orderLines;
 
+    public Order() {
+    }
+
+    public Order(OrderNo number, ShippingInfo shippingInfo, OrderState orderState, List<OrderLine> orderLines) {
+        this.number = number;
+        this.shippingInfo = shippingInfo;
+        this.state = orderState;
+        this.orderLines = orderLines;
+        this.totalAmounts = calculateTotalAmounts();
+    }
+
+    public Money getTotalAmounts() {
+        return totalAmounts;
+    }
+
     /**
      * OrderState 뿐만 아니라 다른 정보도 함께 사용하여 changeable 한지 확인하려면 OrderState 대신
      * Order 객체에서 처리해야 함

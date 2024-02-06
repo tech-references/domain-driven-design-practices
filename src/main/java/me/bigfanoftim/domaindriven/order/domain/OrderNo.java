@@ -16,19 +16,14 @@ public class OrderNo implements Serializable {
     @Column(name = "order_number")
     private String number;
 
-    /**
-     * 밸류 타입으로 식별자를 구성하면 식별자에 기능을 추가할 수 있다는 장점이 있다.
-     * 1세대 시스템의 주문번호와 2세대 시스템의 주문번호를 구분하는 기능
-     *
-     * if (order.getNumber().is2ndGeneration()) { ... }
-     */
+    public OrderNo(String number) {
+        this.number = number;
+    }
+
     public boolean is2ndGeneration() {
         return number.startsWith("N");
     }
 
-    /**
-     * 식별자로 사용되는 밸류 타입이기 때문에 equals(), hashCode() 구현을 잊지 말자.
-     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -6,6 +6,13 @@ import jakarta.persistence.Embeddable;
 public class ShippingInfo {
 
     private Receiver receiver;
-
     private Address address;
+
+    public ShippingInfo() {
+    }
+
+    public ShippingInfo(Receiver receiver, Address address) {
+        this.receiver = receiver;
+        this.address = address;
+    }
 }
