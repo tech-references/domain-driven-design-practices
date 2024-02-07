@@ -3,10 +3,11 @@ package me.bigfanoftim.domaindriven.catalog.domain.product;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
-public class ProductId {
+public class ProductId implements Serializable {
 
     @Column(name = "product_id")
     private String id;
