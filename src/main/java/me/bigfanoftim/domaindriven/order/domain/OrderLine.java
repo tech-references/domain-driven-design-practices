@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
+import me.bigfanoftim.domaindriven.catalog.domain.product.ProductId;
 import me.bigfanoftim.domaindriven.common.jpa.MoneyConverter;
 import me.bigfanoftim.domaindriven.common.model.Money;
 
@@ -11,7 +12,7 @@ import me.bigfanoftim.domaindriven.common.model.Money;
 public class OrderLine {
 
     @Embedded
-    private String productId;
+    private ProductId productId;
 
     @Convert(converter = MoneyConverter.class)
     @Column(name = "price")
@@ -27,7 +28,7 @@ public class OrderLine {
     protected OrderLine() {
     }
 
-    public OrderLine(String productId, Money price, int quantity) {
+    public OrderLine(ProductId productId, Money price, int quantity) {
         this.productId = productId;
         this.price = price; // Money는 불변이기 때문에 새로 객체를 생성할 필요가 없음
         this.quantity = quantity;

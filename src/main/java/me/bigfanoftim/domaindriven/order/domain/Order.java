@@ -18,6 +18,9 @@ public class Order {
     private OrderNo number;
 
     @Embedded
+    private Orderer orderer;
+
+    @Embedded
     private ShippingInfo shippingInfo;
 
     @Enumerated(value = EnumType.STRING)

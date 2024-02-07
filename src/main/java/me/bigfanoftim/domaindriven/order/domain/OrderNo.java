@@ -16,6 +16,9 @@ public class OrderNo implements Serializable {
     @Column(name = "order_number")
     private String number;
 
+    public OrderNo() {
+    }
+
     public OrderNo(String number) {
         this.number = number;
     }
