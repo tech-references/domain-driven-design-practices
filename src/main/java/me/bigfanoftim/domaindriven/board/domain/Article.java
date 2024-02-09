@@ -11,6 +11,12 @@ import jakarta.persistence.*;
 @Table(name = "article")
 @SecondaryTable(
         name = "article_content",
+        /**
+         * 이렇게 설정하면 article의 id, article_content의 id가 연결되는 것
+         * article_content의 pk이자 fk가 id라는 컬럼이 되어서 다소 헷갈릴 것 같음
+         * 이러면 joinColumn과 같은 속성을 통해 처리해야 하는데 @SecondaryTable로는 불가능
+         * 따라서 조금 더 세밀한 조절이 필요한 경우 ArticleContent를 밸류가 아닌 엔티티로 처리해야 한다.
+         */
         pkJoinColumns = @PrimaryKeyJoinColumn(name = "id")
 )
 public class Article {
@@ -19,6 +25,7 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String title;
 
     @Embedded
