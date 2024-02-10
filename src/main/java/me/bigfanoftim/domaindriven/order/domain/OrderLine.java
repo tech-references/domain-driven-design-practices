@@ -3,7 +3,7 @@ package me.bigfanoftim.domaindriven.order.domain;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Embedded;
 import me.bigfanoftim.domaindriven.catalog.domain.product.ProductId;
 import me.bigfanoftim.domaindriven.common.jpa.MoneyConverter;
 import me.bigfanoftim.domaindriven.common.model.Money;
@@ -11,7 +11,7 @@ import me.bigfanoftim.domaindriven.common.model.Money;
 @Embeddable
 public class OrderLine {
 
-    @EmbeddedId
+    @Embedded
     private ProductId productId;
 
     @Convert(converter = MoneyConverter.class)
