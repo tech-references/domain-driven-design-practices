@@ -10,5 +10,3 @@ create table article_content
     content      text        null,
     content_type varchar(20) null
 );
-
-
