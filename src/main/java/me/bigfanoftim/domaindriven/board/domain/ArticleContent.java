@@ -6,5 +6,4 @@ import jakarta.persistence.Embeddable;
 public class ArticleContent {
 
     private String content;
-    private String contentType;
 }

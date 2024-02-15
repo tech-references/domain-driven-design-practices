@@ -40,4 +40,11 @@ public class Article {
             )
     })
     private ArticleContent content;
+
+    protected Article() { }
+
+    public Article(String title, ArticleContent content) {
+        this.title = title;
+        this.content = content;
+    }
 }
