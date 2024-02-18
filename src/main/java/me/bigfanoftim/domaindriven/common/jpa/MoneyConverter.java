@@ -1,7 +1,7 @@
-package me.bigfanoftim.domaindriven.temp.common.jpa;
+package me.bigfanoftim.domaindriven.common.jpa;
 
 import jakarta.persistence.AttributeConverter;
-import me.bigfanoftim.domaindriven.temp.common.model.Money;
+import me.bigfanoftim.domaindriven.common.model.Money;
 
 
 /**

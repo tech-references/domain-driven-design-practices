@@ -4,9 +4,9 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
-import me.bigfanoftim.domaindriven.temp.catalog.domain.product.ProductId;
-import me.bigfanoftim.domaindriven.temp.common.jpa.MoneyConverter;
-import me.bigfanoftim.domaindriven.temp.common.model.Money;
+import me.bigfanoftim.domaindriven.catalog.domain.product.ProductId;
+import me.bigfanoftim.domaindriven.common.jpa.MoneyConverter;
+import me.bigfanoftim.domaindriven.common.model.Money;
 
 @Embeddable
 public class OrderLine {

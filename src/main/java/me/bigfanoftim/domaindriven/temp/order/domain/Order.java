@@ -1,8 +1,8 @@
 package me.bigfanoftim.domaindriven.temp.order.domain;
 
 import jakarta.persistence.*;
-import me.bigfanoftim.domaindriven.temp.common.jpa.MoneyConverter;
-import me.bigfanoftim.domaindriven.temp.common.model.Money;
+import me.bigfanoftim.domaindriven.common.jpa.MoneyConverter;
+import me.bigfanoftim.domaindriven.common.model.Money;
 
 import java.util.List;
 

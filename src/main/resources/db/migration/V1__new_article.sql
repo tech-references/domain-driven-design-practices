@@ -1,6 +1,6 @@
 create table article
 (
-    id    bigint      not null auto_increment comment 'article pk',
+    id    bigint      not null primary key auto_increment comment 'article pk',
     title varchar(50) not null comment 'article 타이틀'
 );
 

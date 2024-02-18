@@ -1,4 +1,4 @@
-package me.bigfanoftim.domaindriven.temp.catalog.domain.category;
+package me.bigfanoftim.domaindriven.catalog.domain.category;
 
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.Column;
@@ -11,4 +11,7 @@ public class Category {
     @EmbeddedId
     @AttributeOverride(name = "category_id", column = @Column(name = "id"))
     private CategoryId categoryId;
+
+    @Column(nullable = false)
+    private String name;
 }

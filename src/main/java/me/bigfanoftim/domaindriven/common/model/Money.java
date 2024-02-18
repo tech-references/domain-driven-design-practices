@@ -1,4 +1,4 @@
-package me.bigfanoftim.domaindriven.temp.common.model;
+package me.bigfanoftim.domaindriven.common.model;
 
 import java.util.Objects;
 

@@ -1,25 +1,26 @@
 package me.bigfanoftim.domaindriven.board.domain;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+@ActiveProfiles("test")
 @DataJpaTest
 @DisplayName("Article Aggregate Tests")
 public class ArticleAggregateTest {
 
-    @Autowired
-    private EntityManager entityManager;
+    @PersistenceContext EntityManager entityManager;
 
-    @Autowired
-    private ArticleRepository articleRepository;
+    @Autowired ArticleRepository articleRepository;
 
     @Nested
     @DisplayName("updateContentType() method test")

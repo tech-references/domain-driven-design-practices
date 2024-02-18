@@ -1,10 +1,11 @@
-package me.bigfanoftim.domaindriven.temp.catalog.domain.product;
+package me.bigfanoftim.domaindriven.catalog.domain.product;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.UUID;
 
 @Embeddable
 public class ProductId implements Serializable {
@@ -17,6 +18,10 @@ public class ProductId implements Serializable {
 
     public ProductId(String id) {
         this.id = id;
+    }
+
+    public static ProductId createUniqueId() {
+        return new ProductId(UUID.randomUUID().toString());
     }
 
     @Override
