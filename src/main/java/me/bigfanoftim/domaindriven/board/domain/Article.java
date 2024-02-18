@@ -47,4 +47,20 @@ public class Article {
         this.title = title;
         this.content = content;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public ArticleContent getContent() {
+        return content;
+    }
+
+    public void updateContentType(String newContentType) {
+        if (content == null) {
+            throw new IllegalStateException("ArticleContent cannot be null when trying to update.");
+        }
+
+        content = new ArticleContent(content.getContent(), newContentType);
+    }
 }
