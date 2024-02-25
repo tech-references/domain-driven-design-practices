@@ -1,4 +1,4 @@
-package me.bigfanoftim.domaindriven.catalog.domain.product;
+package me.bigfanoftim.domaindriven.catalog.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

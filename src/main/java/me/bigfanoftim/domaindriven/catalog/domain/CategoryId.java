@@ -1,4 +1,4 @@
-package me.bigfanoftim.domaindriven.catalog.domain.category;
+package me.bigfanoftim.domaindriven.catalog.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

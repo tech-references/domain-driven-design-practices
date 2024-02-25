@@ -1,4 +1,4 @@
-package me.bigfanoftim.domaindriven.catalog.domain.category;
+package me.bigfanoftim.domaindriven.catalog.domain;
 
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.Column;
