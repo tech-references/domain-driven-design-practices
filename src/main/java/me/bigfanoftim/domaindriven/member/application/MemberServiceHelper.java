@@ -1,8 +1,8 @@
-package me.bigfanoftim.domaindriven.temp.member.application;
+package me.bigfanoftim.domaindriven.member.application;
 
-import me.bigfanoftim.domaindriven.temp.member.domain.Member;
-import me.bigfanoftim.domaindriven.temp.member.domain.MemberId;
-import me.bigfanoftim.domaindriven.temp.member.domain.MemberRepository;
+import me.bigfanoftim.domaindriven.member.domain.Member;
+import me.bigfanoftim.domaindriven.member.domain.MemberId;
+import me.bigfanoftim.domaindriven.member.domain.MemberRepository;
 import org.springframework.stereotype.Component;
 
 @Component

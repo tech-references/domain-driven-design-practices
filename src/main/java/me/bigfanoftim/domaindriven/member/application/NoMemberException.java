@@ -1,4 +1,4 @@
-package me.bigfanoftim.domaindriven.temp.member.application;
+package me.bigfanoftim.domaindriven.member.application;
 
 public class NoMemberException extends RuntimeException {
 }

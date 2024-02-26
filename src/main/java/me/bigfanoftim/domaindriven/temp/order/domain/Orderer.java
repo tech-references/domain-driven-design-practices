@@ -1,7 +1,7 @@
 package me.bigfanoftim.domaindriven.temp.order.domain;
 
 import jakarta.persistence.*;
-import me.bigfanoftim.domaindriven.temp.member.domain.MemberId;
+import me.bigfanoftim.domaindriven.member.domain.MemberId;
 
 @Embeddable
 public class Orderer {
